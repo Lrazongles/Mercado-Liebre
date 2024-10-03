@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFDD00; /* Fondo amarillo */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para la cabecera */
+header {
+    background-color: #FFDD00; /* Fondo amarillo */
+    padding: 20px;
+}
+
+/* Contenedor de logo, nombre y barra de búsqueda */
+.header-content {
+    display: flex; /* Usamos flexbox para alinear logo y barra de búsqueda */
+    justify-content: space-between; /* Espaciado entre logo y el resto */
+    align-items: center; /* Alineamos verticalmente */
+}
+
+/* Contenedor del logo y título */
+.logo-container {
+    display: flex; /* Usamos flexbox para alinear elementos */
+    align-items: center; /* Alineamos verticalmente */
+}
+
+/* Estilo del logo */
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+/* Estilo del título en mayúsculas y color azul */
+.roboto-bold {
+    font-weight: 700;
+    font-size: 24px;
+    color: #03264C; /* Azul */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Contenedor para centrar barra de búsqueda y leyenda */
+.center-container {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    width: 100%; /* Para que ocupe todo el ancho */
+}
+
+/* Estilo para la barra de búsqueda */
+.search-container {
+    position: relative; /* Para posicionar el ícono de lupa */
+    display: flex; /* Para alinear la barra de búsqueda y el ícono */
+    justify-content: center; /* Centrar la barra de búsqueda */
+}
+
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #666; /* Gris oscuro */
+    border-radius: 5px;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilo para el ícono de lupa */
+.search-icon {
+    margin-left: 5px; /* Espacio entre la barra de búsqueda y el ícono */
+    color: #03264C; /* Color azul para el ícono */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+/* Estilo para la leyenda debajo de la barra de búsqueda */
+.leyenda {
+    font-size: 14px;
+    color: #666; /* Gris oscuro */
+    margin-top: 10px;
+    display: flex; /* Usar flexbox para alinear el ícono y el texto */
+    align-items: center; /* Alineamos verticalmente */
+    justify-content: center; /* Centrar la leyenda */
+}
+
+.leyenda i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+    color: #03264C; /* Color azul para el ícono */
+}
+
+/* Estilos para los íconos de navegación */
+.nav-icons {
+    background-color: #FFDD00; /* Fondo amarillo para la sección de navegación */
+    padding: 10px 0; /* Espacio en la parte superior e inferior */
+}
+
+.nav-icons ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre íconos */
+}
+
+.nav-icons li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons li i {
+    font-size: 24px; /* Tamaño del ícono */
+    color: #03264C; /* Azul */
+    margin-right: 8px;
+}
+
+.nav-icons li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #03264C; /* Azul */
+    text-decoration: none;
+}
+
+/* Estilo para el contenido principal */
+main {
+    padding: 20px;
+}
+
+.roboto-regular {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #FFDD00;
+    padding: 20px;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
