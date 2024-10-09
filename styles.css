@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 12px; /* Cuerpo de texto: 12px */
 }
 
 /* Estilo para la cabecera */
@@ -13,11 +14,18 @@ header {
     padding: 20px;
 }
 
-/* Contenedor de logo, nombre y barra de búsqueda */
+/* Contenedor de logo y menú hamburguesa */
 .header-content {
-    display: flex; /* Usamos flexbox para alinear logo y barra de búsqueda */
-    justify-content: space-between; /* Espaciado entre logo y el resto */
+    display: flex; /* Usamos flexbox para alinear el logo y el menú */
+    justify-content: space-between; /* Espaciado entre el logo y el resto */
     align-items: center; /* Alineamos verticalmente */
+}
+
+/* Estilo del menú hamburguesa */
+.menu-icon {
+    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+    font-size: 28px; /* Tamaño del ícono del menú */
+    color: #03264C; /* Color azul para el ícono */
 }
 
 /* Contenedor del logo y título */
@@ -39,6 +47,7 @@ header {
     font-size: 24px;
     color: #03264C; /* Azul */
     text-transform: uppercase; /* Texto en mayúsculas */
+    margin-right: 20px; /* Espacio entre el título y la barra de búsqueda */
 }
 
 /* Contenedor para centrar barra de búsqueda y leyenda */
@@ -73,7 +82,7 @@ header {
 
 /* Estilo para la leyenda debajo de la barra de búsqueda */
 .leyenda {
-    font-size: 14px;
+    font-size: 12px; /* Cuerpo de texto: 12px */
     color: #666; /* Gris oscuro */
     margin-top: 10px;
     display: flex; /* Usar flexbox para alinear el ícono y el texto */
@@ -84,6 +93,49 @@ header {
 .leyenda i {
     margin-right: 5px; /* Espacio entre el ícono y el texto */
     color: #03264C; /* Color azul para el ícono */
+}
+
+/* Titulares de secciones */
+h2 {
+    font-size: 24px; /* Tamaño de titulares: 24px */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los productos */
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto {
+    margin: 10px;
+    width: 100px;
+    text-align: left;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+/* Precios */
+.producto p:nth-child(2) {
+    font-size: 18px; /* Tamaño de precios: 18px */
+    font-weight: bold;
+}
+
+/* Descuentos */
+.producto p:nth-child(2)::after {
+    content: " OFF"; /* Texto después del precio */
+    font-size: 16px; /* Tamaño de descuentos: 16px */
+    color: red;
+}
+
+/* Descripción */
+.producto p:nth-child(3) {
+    font-size: 16px; /* Tamaño de descripciones: 16px */
+    color: #333; /* Color de descripciones */
 }
 
 /* Estilos para los íconos de navegación */
@@ -130,7 +182,7 @@ main {
 
 /* Estilo para el pie de página */
 footer {
-    background-color: #FFDD00;
+    background-color: #FFF;
     padding: 20px;
 }
 
@@ -153,3 +205,272 @@ footer nav ul li a {
 footer nav ul li a:hover {
     text-decoration: underline;
 }
+/* Main centrado y ocupando el 90% del ancho */
+main {
+    width: 90%;
+    margin: 0 auto; /* Centrar el main */
+    padding: 20px;
+}
+
+/* Contenedor de los productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px; /* Separación entre los productos */
+}
+
+/* Caja general del producto */
+.producto {
+    background-color: #fff;
+    width: 100%; /* Producto ocupa todo el ancho en mobile */
+    border-top: 1px solid #ebebeb; /* Borde superior de 1px, color #ebebeb */
+    padding: 15px; /* Separación del contenido de los bordes */
+    text-align: center; /* Alinear contenido al centro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Imagen del producto */
+.producto img {
+    max-width: 100%;
+    height: auto; /* Imagen ajustada al contenedor */
+    margin-bottom: 15px;
+}
+
+/* Caja dentro del producto con detalles (precio, envío, etc.) */
+.producto .detalle {
+    padding: 15px;
+    border: 1px solid #ebebeb; /* Borde de la caja interior */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo de la caja interior */
+}
+
+/* Precio del producto */
+.producto .precio {
+    font-size: 18px; /* Tamaño de precios: 18px */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Descuento del producto */
+.producto .descuento {
+    font-size: 16px; /* Tamaño de descuentos: 16px */
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Descripción del producto */
+.producto .descripcion {
+    font-size: 16px; /* Tamaño de descripciones: 16px */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Logo de envío */
+.producto .envio {
+    display: block;
+    margin: 10px auto;
+    max-width: 50px; /* Tamaño del logo de envío */
+}
+
+/* Estilo de los productos en dispositivos móviles (ancho menor a 768px) */
+@media (max-width: 767px) {
+    .producto {
+        width: 100%; /* Producto ocupa todo el ancho en móviles */
+    }
+
+    .producto .descripcion {
+        display: none; /* Ocultar descripción en móviles */
+    }
+}
+
+/* Estilo para tablets (ancho mínimo de 768px) */
+@media (min-width: 768px) {
+    .producto {
+        width: calc(50% - 10px); /* Productos al 50% del ancho en tablets */
+        box-shadow: 0px 0px 10px rgb(100, 100, 100); /* Sombra en tablets */
+    }
+
+    /* Mostrar la descripción en tablets */
+    .producto .descripcion {
+        display: block;
+    }
+}
+
+/* Estilo para desktop (ancho mínimo de 1024px) */
+@media (min-width: 1024px) {
+    .producto {
+        width: calc(25% - 10px); /* Productos al 25% del ancho en desktops */
+        box-shadow: 0px 0px 10px rgb(100, 100, 100); /* Sombra en desktops */
+    }
+
+    /* Mostrar la descripción en desktops */
+    .producto .descripcion {
+        display: block;
+    }
+}
+
+
+/* Caja general del producto */
+.producto {
+    background-color: #fff;
+    width: 100%; /* Producto ocupa todo el ancho en mobile */
+    border-top: 1px solid #ebebeb; /* Borde superior de 1px, color #ebebeb */
+    padding: 15px; /* Separación del contenido de los bordes */
+    box-shadow: 0px 0px 10px rgb(100, 100, 100); /* Sombra */
+    text-align: center; /* Alinear contenido al centro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Imagen del producto */
+.producto img {
+    max-width: 100%;
+    height: auto; /* Imagen ajustada al contenedor */
+    margin-bottom: 15px;
+}
+
+/* Caja dentro del producto con detalles (precio, envío, etc.) */
+.producto .detalle {
+    padding: 15px;
+    border: 1px solid #ebebeb; /* Borde de la caja interior */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo de la caja interior */
+}
+
+/* Precio del producto */
+.producto .precio {
+    font-size: 18px; /* Tamaño de precios: 18px */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Descuento del producto */
+.producto .descuento {
+    font-size: 16px; /* Tamaño de descuentos: 16px */
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Descripción del producto */
+.producto .descripcion {
+    font-size: 16px; /* Tamaño de descripciones: 16px */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Logo de envío */
+.producto .envio {
+    display: block;
+    margin: 10px auto;
+    max-width: 50px; /* Tamaño del logo de envío */
+}
+
+/* Estilo de los productos en mobile (ancho máximo de 768px) */
+@media (max-width: 768px) {
+    .producto {
+        width: 100%; /* Producto ocupa todo el ancho en móviles */
+    }
+
+    .producto .descripcion {
+        display: none; /* Ocultar descripción en móviles */
+    }
+}
+/* Estilo para la barra de búsqueda */
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Ajusta este valor según lo que necesites */
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #666;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Estilo del ícono de lupa al lado de la barra de búsqueda */
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #03264C;
+}
+/* Estilo para el contenedor del ícono del camión */
+.envio-icono {
+    display: inline-flex; /* Usar flex para centrar el ícono */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 40px; /* Ancho del círculo */
+    height: 40px; /* Alto del círculo */
+    border: 2px solid green; /* Borde verde */
+    border-radius: 50%; /* Hace que el borde sea un círculo */
+    margin-right: 5px; /* Espacio a la derecha del círculo */
+}
+
+
+    
+    h1 {
+        text-align: center;
+    }
+    
+    form {
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+        background: #ebebeb;;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+        display: block;
+        margin: 10px 0 5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    input[type="file"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px;
+        border: 1px solid #666;
+        border-radius: 4px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button[type="reset"] {
+        background-color: #dc3545;
+    }
+    
+    button:hover {
+        opacity: 0.9;
+    }
+    .space {
+        height: 50px; /* Ajusta la altura según lo que necesites */
+        background-color: yellow; /* Color de fondo amarillo */
+    }
+    .icono-tarjeta {
+        color: #03264c;
+        font-size: 80px;
+        display: block; /* Esto asegura que el ícono esté en una línea separada */
+        margin: 0 auto; /* Esto centra el ícono */
+    }
+    
+    
